@@ -5,17 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- google fonts https://fonts.google.com/-->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- CSS para bxslider-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    <!--Estilos css definidos por mi-->
     <link rel="stylesheet" href="css/style.css">
+    <link id="theme" rel="stylesheet" href="css/blue.css">
+
+    <!--Libreria JQuery-->
     <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Script para https://bxslider.com/ -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- Scripts para moment http://momentjs.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js" integrity="sha256-bETP3ndSBCorObibq37vsT+l/vwScuAc9LRJIQyb068=" crossorigin="anonymous"></script>
+
+    <!-- Mi JavaScript -->
     <script src="js/main.js"></script>
+
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Proyecto en JavaScript</title>
 </head>
 
 <body>
+    <div id="selector-tema">
+        <div id="tema-verde"></div>
+        <div id="tema-rojo"></div>
+        <div id="tema-azul"></div>
+    </div>
     <section id="global">
         <header>
             <div id="logo">
@@ -42,34 +65,14 @@
                 </ul>
             </nav>
         </header>
-
         <div id="galeria">
             <div class="imagen-slider"><img src="img/hojas.jpg" alt="hojas verdes"></div>
             <div class="imagen-slider"><img src="img/rojo.jpg" alt="hojas rojas"></div>
             <div class="imagen-slider"><img src="img/cielo.jpg" alt="cielo"></div>
         </div>
-
         <section id="content">
             <div id="posts">
-                <article class="post">
-                    <h2>Título del artículo</h2>
-                    <p class="fecha">Fecha de publicación:
-                        <time datetime="2018-9-23">23/09/2018</time>
-                    </p>
-                    <p>Ut nulla aute enim ullamco. Laboris nulla nulla aliquip Lorem incididunt adipisicing eiusmod exercitation do quis qui quis nisi ullamco. Non minim ipsum occaecat do quis nulla sunt reprehenderit laborum ullamco aliquip adipisicing
-                        magna. Ut aute cupidatat id laborum nostrud qui id pariatur proident irure. Laboris reprehenderit ut fugiat amet nulla exercitation esse. Veniam esse do sit est irure do velit aliqua. Sint duis labore nisi nisi ex esse fugiat do
-                        laboris dolor velit et.</p>
-                    <a href="#" class="boton-mas">Leer más</a>
-                </article>
-                <article class="post">
-                    <h2>Título número dos</h2>
-                    <p class="fecha">Fecha de publicación:
-                        <time datetime="2018-9-23">23/09/2018</time>
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur nesciunt vero accusantium numquam? Harum rerum veniam quasi aspernatur repudiandae atque? Magnam accusantium soluta praesentium, molestias repelle ndus ullam
-                        pariatur alias? At voluptates quod modi omnis error magni reprehenderit nemo praesentium? Minima iste, saepe autem necessitatibus dolor cupiditate suscipit fugiat soluta aliquid ipsa.</p>
-                    <a href="#" class="boton-mas">Leer más</a>
-                </article>
+
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -95,7 +98,6 @@
             </aside>
             <div class="clearfix"></div>
         </section>
-
     </section>
     <footer>
         <p>/* &copy; JccTek.com - José Carlos Calzada */</p>

@@ -1,0 +1,42 @@
+body {
+    background: url('../img/rojo.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#logo {
+    background: rgb(100, 0, 0);
+}
+
+#menu {
+    background: rgb(40, 0, 0);
+}
+
+#menu ul li:hover {
+    background: rgb(100, 0, 0);
+}
+
+.post h2 {
+    color: rgb(32, 23, 23);
+    text-shadow: 0px 0px .5px darkred;
+}
+
+.boton-mas {
+    background: rgb(100, 0, 0);
+}
+
+.boton-mas:hover {
+    background: rgb(40, 0, 0);
+}
+
+#sidebar h4 {
+    color: rgb(82, 0, 0);
+}
+
+form input[type="submit"] {
+    background: rgb(160, 43, 43);
+}
+
+form input[type="submit"]:hover {
+    background: rgb(100, 0, 0);
+}
