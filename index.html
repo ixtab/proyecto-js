@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Proyecto en JavaScript</title>
@@ -40,8 +43,10 @@
             </nav>
         </header>
 
-        <div id="slider">
-
+        <div id="galeria">
+            <div class="imagen-slider"><img src="img/hojas.jpg" alt="hojas verdes"></div>
+            <div class="imagen-slider"><img src="img/rojo.jpg" alt="hojas rojas"></div>
+            <div class="imagen-slider"><img src="img/cielo.jpg" alt="cielo"></div>
         </div>
 
         <section id="content">
@@ -54,43 +59,37 @@
                     <p>Ut nulla aute enim ullamco. Laboris nulla nulla aliquip Lorem incididunt adipisicing eiusmod exercitation do quis qui quis nisi ullamco. Non minim ipsum occaecat do quis nulla sunt reprehenderit laborum ullamco aliquip adipisicing
                         magna. Ut aute cupidatat id laborum nostrud qui id pariatur proident irure. Laboris reprehenderit ut fugiat amet nulla exercitation esse. Veniam esse do sit est irure do velit aliqua. Sint duis labore nisi nisi ex esse fugiat do
                         laboris dolor velit et.</p>
-                        <a href="#" class = "boton-mas">Leer más</a>
+                    <a href="#" class="boton-mas">Leer más</a>
                 </article>
                 <article class="post">
                     <h2>Título número dos</h2>
                     <p class="fecha">Fecha de publicación:
                         <time datetime="2018-9-23">23/09/2018</time>
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                         Assumenda pariatur nesciunt vero accusantium numquam? 
-                         Harum rerum veniam quasi aspernatur repudiandae atque? 
-                         Magnam accusantium soluta praesentium, molestias repelle
-                         ndus ullam pariatur alias? At voluptates quod modi omnis error 
-                         magni reprehenderit nemo praesentium? Minima iste, saepe autem 
-                         necessitatibus dolor cupiditate suscipit fugiat soluta aliquid ipsa.</p>
-                        <a href="#" class = "boton-mas">Leer más</a>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur nesciunt vero accusantium numquam? Harum rerum veniam quasi aspernatur repudiandae atque? Magnam accusantium soluta praesentium, molestias repelle ndus ullam
+                        pariatur alias? At voluptates quod modi omnis error magni reprehenderit nemo praesentium? Minima iste, saepe autem necessitatibus dolor cupiditate suscipit fugiat soluta aliquid ipsa.</p>
+                    <a href="#" class="boton-mas">Leer más</a>
                 </article>
             </div>
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Quien soy?</span></h4>
                     <img src="img/caracol.jpg" alt="caracol">
-                    <p>Soluta animi exercitationem vel pariatur, optio eum, nemo placeat ipsam!
-                        Laboris reprehenderit ut fugiat amet nulla exercitation esse.
+                    <p>Soluta animi exercitationem vel pariatur, optio eum, nemo placeat ipsam! Laboris reprehenderit ut fugiat amet nulla exercitation esse.
                     </p>
                 </div>
 
                 <div id="login">
-                        <h4><span>Regístrate</span></h4>
-                        <form>
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" / >
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" / >
-                            <label for="password">Contraseña</label>
-                            <input type="password" name="password" id="password" / >
-                            <input type="submit" value="Entrar">
-                        </form>
+                    <h4><span>Entra</span></h4>
+                    <form>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" />
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" />
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" />
+                        <input type="submit" value="Entrar">
+                    </form>
                 </div>
 
             </aside>
