@@ -64,20 +64,28 @@ window.onload = function() {
     });
 
     //Selector de Tema
+    var tema = $("#theme");
+    if (localStorage.getItem("theme") != null) {
+        tema.attr("href", localStorage.getItem("theme"));
+    }
+
     $("#selector-tema").mouseover(function() {
         $(this).animate({ left: '30px' }, 600);
     }).mouseleave(function() {
         $(this).animate({ left: '0' }, 600);
     });
-    var tema = $("#theme");
+
     $("#tema-verde").click(function() {
         tema.attr("href", "css/green.css");
+        localStorage.setItem("theme", "css/green.css");
     });
     $("#tema-rojo").click(function() {
         tema.attr("href", "css/red.css");
+        localStorage.setItem("theme", "css/red.css");
     });
     $("#tema-azul").click(function() {
         tema.attr("href", "css/blue.css");
+        localStorage.setItem("theme", "css/blue.css");
     });
 
 }
