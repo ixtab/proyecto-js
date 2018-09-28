@@ -24,7 +24,7 @@
     height: 90px;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 40px;
+    font-size: 200%;
     letter-spacing: 4px;
     line-height: 90px;
     text-align: center;
@@ -159,7 +159,8 @@ form input[type="password"] {
     width: 80%;
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+#subir {
     font-family: 'Raleway', sans-serif;
     color: whitesmoke;
     text-decoration: none;
@@ -170,13 +171,20 @@ form input[type="submit"] {
     margin: 0 10%;
     border-radius: 10px;
     border: none;
+    outline: none;
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover,
+#subir:hover {
     border: none;
     color: white;
     font-size: 80%;
     margin-bottom: -3.5px;
+}
+
+#subir {
+    float: right;
+    margin-top: -35px;
 }
 
 footer {
@@ -197,10 +205,6 @@ footer {
 .bx-viewport {
     /* Las clases están sacadas con el inspector de Chrome  */
     height: 250px !important;
-}
-
-.imagen-slider {
-    margin-top: -250px;
 }
 
 #selector-tema {

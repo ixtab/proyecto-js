@@ -33,10 +33,12 @@ body {
     color: rgb(82, 0, 0);
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+#subir {
     background: rgb(160, 43, 43);
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover,
+#subir:hover {
     background: rgb(100, 0, 0);
 }

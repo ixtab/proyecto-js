@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link id="theme" rel="stylesheet" href="css/blue.css">
 
-    <!--Libreria JQuery-->
+    <!--Libreria JQuery y JQueryUI-->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
     <!-- Script para https://bxslider.com/ -->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -66,14 +67,15 @@
             </nav>
         </header>
         <div id="galeria">
-            <div class="imagen-slider"><img src="img/hojas.jpg" alt="hojas verdes"></div>
-            <div class="imagen-slider"><img src="img/rojo.jpg" alt="hojas rojas"></div>
-            <div class="imagen-slider"><img src="img/cielo.jpg" alt="cielo"></div>
+            <div class="imagen-slider"><img src="img/cielo.jpg" id="foto-1"></div>
+            <div class="imagen-slider"><img src="img/rojo.jpg" id="foto-2"></div>
+            <div class="imagen-slider"><img src="img/hojas.jpg" id="foto-3"></div>
         </div>
         <section id="content">
             <div id="posts">
 
             </div>
+
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Quien soy?</span></h4>
@@ -83,14 +85,14 @@
                 </div>
 
                 <div id="login">
-                    <h4><span>Entra</span></h4>
+                    <h4><span>Entrar</span></h4>
                     <form>
                         <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" />
+                        <input type="text" name="name" id="form_name" />
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="form_email" />
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" />
+                        <input type="password" name="password" id="form_password" />
                         <input type="submit" value="Entrar">
                     </form>
                 </div>
@@ -98,6 +100,7 @@
             </aside>
             <div class="clearfix"></div>
         </section>
+        <input id="subir" type="submit" value="Subir">
     </section>
     <footer>
         <p>/* &copy; JccTek.com - José Carlos Calzada */</p>

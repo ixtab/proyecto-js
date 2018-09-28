@@ -1,15 +1,15 @@
 window.onload = function() {
 
     // TODO Slider hecho por mi. De momento es este:
-    $('#galeria').bxSlider({ // plugin: bxslider.com
+    $('#galeria').bxSlider({ // plugin: bxslider.com 
+        preloadImages: 'all',
+        auto: true,
         mode: "fade",
         speed: 1000,
-        randomStart: true,
-        captions: true,
-        auto: true,
         pause: 1000,
         pager: false,
         controls: false
+
     });
 
     // Posts Dinámicos, plugin para fecha: http://momentjs.com. 
@@ -78,14 +78,44 @@ window.onload = function() {
     $("#tema-verde").click(function() {
         tema.attr("href", "css/green.css");
         localStorage.setItem("theme", "css/green.css");
+        cambiarFotosSlider();
     });
     $("#tema-rojo").click(function() {
         tema.attr("href", "css/red.css");
         localStorage.setItem("theme", "css/red.css");
+        cambiarFotosSlider();
     });
     $("#tema-azul").click(function() {
         tema.attr("href", "css/blue.css");
         localStorage.setItem("theme", "css/blue.css");
+        cambiarFotosSlider();
+    });
+
+    //Scroll hacia arriba de la página.
+    $("#subir").click(function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 2000, "easeInBounce");
+        return false;
+    });
+
+    //Fotos del slider según tema;
+    cambiarFotosSlider();
+
+    //Login // FALTA POR HACER
+    $("#login form").submit(function(e) {
+        e.preventDefault();
+        if ($("#form_name").val() != "" &&
+            $("#form_email").val() != "" &&
+            $("#form_password").val() != "") {
+            localStorage.setItem("user", $("#form_name").val());
+            $("#login").html("<hr style='margin: 80px 0'> <h3 style='text-transform: uppercase; text-align: center;'>" + localStorage.getItem("user") + "</h3>");
+
+        } else {
+            alert("Rellena todos los campos"); //TODO cambiar aler por dialog widget de jquery ui
+        }
+        return false;
     });
 
 }
@@ -93,10 +123,27 @@ window.onload = function() {
 function mostrarMas(i) {
     $("#parrafo" + i).show(1000);
     $("#boton" + i).text("Mostrar menos").attr("onclick", `mostrarMenos(${i})`);
-
 }
 
 function mostrarMenos(i) {
     $("#parrafo" + i).hide(1000);
     $("#boton" + i).text("Mostrar más").attr("onclick", `mostrarMas(${i})`);
+}
+
+function cambiarFotosSlider() { //Fotos del slider según tema;
+    var tema_actual = $("#theme").attr("href");
+
+    if (tema_actual == "css/red.css") {
+        $("#foto-1").attr("src", "img/frambuesas.jpg");
+        $("#foto-2").attr("src", "img/manzanas.jpg");
+        $("#foto-3").attr("src", "img/candado.jpg");
+    } else if (tema_actual == "css/green.css") {
+        $("#foto-1").attr("src", "img/rana.jpg");
+        $("#foto-2").attr("src", "img/bosque.jpg");
+        $("#foto-3").attr("src", "img/ortigas.jpg");
+    } else {
+        $("#foto-1").attr("src", "img/isla.jpg");
+        $("#foto-2").attr("src", "img/montana.jpg");
+        $("#foto-3").attr("src", "img/pez.jpg");
+    }
 }
