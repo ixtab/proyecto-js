@@ -53,12 +53,13 @@ window.onload = function() {
     posts.forEach((item, index) => {
         var html_post = `
             <article class="post">
-                    <h2>${item.title}</h2>
-                    <p class="fecha">${item.date}</p>
-                    <p>${item.content}</p>
-                    <p id = "parrafo${index}" hidden = "true">${item.extended}</p>
-                    <button id = "boton${index}"class="boton-mas" onclick="mostrarMas(${index})">Mostrar más</button>
-                </article>
+                <h2>${item.title}</h2>
+                <p class="fecha">${item.date}</p>
+                <p>${item.content}</p>
+                <p id = "parrafo${index}" hidden = "true">${item.extended}</p>
+                <button id = "boton${index}"class="boton-mas" onclick="mostrarMas(${index})">Mostrar más</button>
+                <input class="subir" type="submit" value="Subir">
+            </article>
             `;
         $("#posts").append(html_post);
     });
@@ -77,7 +78,7 @@ window.onload = function() {
 
     $("#tema-verde").click(function() {
         tema.attr("href", "css/green.css");
-        localStorage.setItem("theme", "css/green.css");
+        localStorage.removeItem("theme"); // No guardo el tema porque es el que está por defecto.
         cambiarFotosSlider();
     });
     $("#tema-rojo").click(function() {
@@ -92,7 +93,7 @@ window.onload = function() {
     });
 
     //Scroll hacia arriba de la página.
-    $("#subir").click(function(e) {
+    $(".subir").click(function(e) {
         e.preventDefault();
         $("html, body").animate({
             scrollTop: 0
@@ -103,17 +104,26 @@ window.onload = function() {
     //Fotos del slider según tema;
     cambiarFotosSlider();
 
-    //Login // FALTA POR HACER
+    //comprobar usuario en local storage y ponerlo si existe.
+    if (localStorage.getItem("user") != null) {
+        $("#entrar_nombre").text(localStorage.getItem("user"));
+        $("#formulario_entrar").hide();
+        $("#salir").show();
+    }
+
+    //Login 
     $("#login form").submit(function(e) {
         e.preventDefault();
         if ($("#form_name").val() != "" &&
             $("#form_email").val() != "" &&
             $("#form_password").val() != "") {
             localStorage.setItem("user", $("#form_name").val());
-            $("#login").html("<hr style='margin: 80px 0'> <h3 style='text-transform: uppercase; text-align: center;'>" + localStorage.getItem("user") + "</h3>");
+            $("#entrar_nombre").text(localStorage.getItem("user"));
+            $("#formulario_entrar").hide();
+            $("#salir").show();
 
         } else {
-            alert("Rellena todos los campos"); //TODO cambiar aler por dialog widget de jquery ui
+            alert("Rellena todos los campos"); //TODO cambiar alert por dialog widget de jquery ui
         }
         return false;
     });
@@ -146,4 +156,14 @@ function cambiarFotosSlider() { //Fotos del slider según tema;
         $("#foto-2").attr("src", "img/montana.jpg");
         $("#foto-3").attr("src", "img/pez.jpg");
     }
+}
+
+function salir() {
+    localStorage.removeItem('user');
+    $("#formulario_entrar").show();
+    $("#salir").hide();
+    $("#form_name").val(""); // si no se vacia se quedan los valores anteriores.
+    $("#form_email").val("");
+    $("#form_password").val("");
+    $("#entrar_nombre").text("Entrar");
 }

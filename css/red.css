@@ -34,11 +34,13 @@ body {
 }
 
 form input[type="submit"],
-#subir {
+.subir,
+#salir {
     background: rgb(160, 43, 43);
 }
 
 form input[type="submit"]:hover,
-#subir:hover {
+.subir:hover,
+#salir:hover {
     background: rgb(100, 0, 0);
 }

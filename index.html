@@ -14,7 +14,7 @@
 
     <!--Estilos css definidos por mi-->
     <link rel="stylesheet" href="css/style.css">
-    <link id="theme" rel="stylesheet" href="css/blue.css">
+    <link id="theme" rel="stylesheet" href="css/green.css">
 
     <!--Libreria JQuery y JQueryUI-->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -67,9 +67,9 @@
             </nav>
         </header>
         <div id="galeria">
-            <div class="imagen-slider"><img src="img/cielo.jpg" id="foto-1"></div>
-            <div class="imagen-slider"><img src="img/rojo.jpg" id="foto-2"></div>
-            <div class="imagen-slider"><img src="img/hojas.jpg" id="foto-3"></div>
+            <div class="imagen-slider"><img src="img/rana.jpg" id="foto-1"></div>
+            <div class="imagen-slider"><img src="img/bosque.jpg" id="foto-2"></div>
+            <div class="imagen-slider"><img src="img/ortigas.jpg" id="foto-3"></div>
         </div>
         <section id="content">
             <div id="posts">
@@ -85,8 +85,8 @@
                 </div>
 
                 <div id="login">
-                    <h4><span>Entrar</span></h4>
-                    <form>
+                    <h4><span id="entrar_nombre">Entrar</span></h4>
+                    <form id="formulario_entrar">
                         <label for="name">Nombre</label>
                         <input type="text" name="name" id="form_name" />
                         <label for="email">Email</label>
@@ -95,12 +95,12 @@
                         <input type="password" name="password" id="form_password" />
                         <input type="submit" value="Entrar">
                     </form>
+                    <button id="salir" onclick="salir()" hidden="true">Salir</button>
                 </div>
 
             </aside>
             <div class="clearfix"></div>
         </section>
-        <input id="subir" type="submit" value="Subir">
     </section>
     <footer>
         <p>/* &copy; JccTek.com - José Carlos Calzada */</p>
