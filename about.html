@@ -9,8 +9,10 @@
     <!-- google fonts https://fonts.google.com/-->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-    <!-- CSS para bxslider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- Estilos CSS para JQueryUI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
 
     <!--Estilos css definidos por mi-->
     <link rel="stylesheet" href="css/style.css">
@@ -19,9 +21,6 @@
     <!--Libreria JQuery y JQueryUI-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-
-    <!-- Script para https://bxslider.com/ -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <!-- Scripts para moment http://momentjs.com/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
@@ -52,7 +51,7 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="#global">Inicio</a>
+                        <a href="index.html">Inicio</a>
                     </li>
                     <li>
                         <a href="#">Ejercicios</a>
@@ -66,14 +65,28 @@
                 </ul>
             </nav>
         </header>
-        <div id="galeria" hidden="true">
-            <div class="imagen-slider"><img src="img/rana.jpg" id="foto-1"></div>
-            <div class="imagen-slider"><img src="img/bosque.jpg" id="foto-2"></div>
-            <div class="imagen-slider"><img src="img/ortigas.jpg" id="foto-3"></div>
-        </div>
+
         <section id="content">
-            <div id="posts">
-                <!--Se cargan dinámicamente-->
+            <div id="box">
+                <!-- Cargar acordeon -->
+                <h2>Sobre mi</h2>
+                <div id="acordeon">
+                    <h3>Trabajos</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque eligendi, facere soluta assumenda dicta labore quasi dolorem necessitatibus ipsum mollitia! Blanditiis aspernatur eligendi voluptatem rerum facilis, vero
+                            animi officiis.</p>
+                    </div>
+                    <h3>Estudios</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque eligendi, facere soluta assumenda dicta labore quasi dolorem necessitatibus ipsum mollitia! Blanditiis aspernatur eligendi voluptatem rerum facilis, vero
+                            animi officiis.</p>
+                    </div>
+                    <h3>Aficiones</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque eligendi, facere soluta assumenda dicta labore quasi dolorem necessitatibus ipsum mollitia! Blanditiis aspernatur eligendi voluptatem rerum facilis, vero
+                            animi officiis.</p>
+                    </div>
+                </div>
             </div>
 
             <aside id="sidebar">
