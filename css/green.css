@@ -16,7 +16,8 @@ body {
     background: rgb(0, 73, 0);
 }
 
-h2 {
+h2,
+h3 {
     color: rgb(23, 32, 23);
     text-shadow: 0px 0px .5px darkgreen;
 }
@@ -35,13 +36,15 @@ h2 {
 
 form input[type="submit"],
 .subir,
-#salir {
+#salir,
+#enviar_mail {
     background: rgb(0, 114, 0);
 }
 
 form input[type="submit"]:hover,
 .subir:hover,
-#salir:hover {
+#salir:hover,
+#enviar_mail:hover {
     background: rgb(0, 73, 0);
 }
 
@@ -52,4 +55,9 @@ form input[type="submit"]:hover,
 
 .ui-accordion-header-collapsed {
     color: black;
+}
+
+#reloj:hover {
+    color: rgb(0, 73, 0);
+    text-shadow: 0 0 20px rgb(0, 200, 0);
 }

@@ -146,6 +146,16 @@ window.onload = function() {
     if (window.location.href.indexOf('about') > -1) {
         $("#acordeon").accordion();
     }
+    // Validación
+    $("form input[name='date']").datepicker({
+        autoSize: true,
+        dateFormat: 'dd/mm/yy'
+    });
+    $.validate({
+        lang: 'es',
+        errorMessagePosition: 'top',
+        scrollToTopOnError: true
+    });
 
 }
 
@@ -166,14 +176,14 @@ function cambiarFotosSlider() { //Fotos del slider según tema;
         $("#foto-1").attr("src", "img/frambuesas.jpg");
         $("#foto-2").attr("src", "img/manzanas.jpg");
         $("#foto-3").attr("src", "img/candado.jpg");
-    } else if (tema_actual == "css/green.css") {
-        $("#foto-1").attr("src", "img/rana.jpg");
-        $("#foto-2").attr("src", "img/bosque.jpg");
-        $("#foto-3").attr("src", "img/ortigas.jpg");
-    } else {
+    } else if (tema_actual == "css/blue.css") {
         $("#foto-1").attr("src", "img/isla.jpg");
         $("#foto-2").attr("src", "img/montana.jpg");
         $("#foto-3").attr("src", "img/pez.jpg");
+    } else {
+        $("#foto-1").attr("src", "img/rana.jpg");
+        $("#foto-2").attr("src", "img/bosque.jpg");
+        $("#foto-3").attr("src", "img/ortigas.jpg");
     }
 }
 
@@ -185,4 +195,21 @@ function salir() {
     $("#form_email").val("");
     $("#form_password").val("");
     $("#entrar_nombre").text("Entrar");
+}
+
+function sendMail() {
+    var cuerpo = $("#contact_text").val();
+    var subject = $("#contact_name").val() +
+        " " +
+        $("#contact_surname").val() +
+        ": " +
+        $("#contact_email").val() +
+        ": " +
+        $("#contact_date").val();
+    var link = "mailto:jccalzadag@gmail.com" +
+        "&subject=" + escape(subject) +
+        "&body=" + escape(cuerpo);
+
+    window.location.href = link;
+    console.log(subject + " - " + cuerpo);
 }

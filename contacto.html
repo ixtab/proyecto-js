@@ -9,8 +9,10 @@
     <!-- google fonts https://fonts.google.com/-->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-    <!-- CSS para bxslider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- Estilos CSS para JQueryUI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
 
     <!--Estilos css definidos por mi-->
     <link rel="stylesheet" href="css/style.css">
@@ -20,12 +22,12 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
-    <!-- Script para https://bxslider.com/ -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
     <!-- Scripts para moment http://momentjs.com/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js" integrity="sha256-bETP3ndSBCorObibq37vsT+l/vwScuAc9LRJIQyb068=" crossorigin="anonymous"></script>
+
+    <!-- Scripts para validación http://www.formvalidator.net/index.html-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <!-- Mi JavaScript -->
     <script src="js/main.js"></script>
@@ -52,7 +54,7 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <a href="#global">Inicio</a>
+                        <a href="index.html">Inicio</a>
                     </li>
                     <li>
                         <a href="#">Ejercicios</a>
@@ -66,14 +68,26 @@
                 </ul>
             </nav>
         </header>
-        <div id="galeria" hidden="true">
-            <div class="imagen-slider"><img src="img/rana.jpg" id="foto-1"></div>
-            <div class="imagen-slider"><img src="img/bosque.jpg" id="foto-2"></div>
-            <div class="imagen-slider"><img src="img/ortigas.jpg" id="foto-3"></div>
-        </div>
+
         <section id="content">
-            <div id="posts">
-                <!--Se cargan dinámicamente-->
+            <div id="box">
+                <!-- Cargar formulario -->
+                <form id="contacto">
+                    <h2>Contacto</h2>
+                    <h3>(Ejemplo de validación de campos)</h3>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="contact_name" data-validation="required">
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" id="contact_surname" data-validation="required">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="contact_email" data-validation="email">
+                    <label for="nombre">Fecha de nacimiento</label>
+                    <input type="text" name="date" id="contact_date" data-validation="date" data-validation-format="dd/mm/yyyy">
+                    <label for="msg">Texto</label>
+                    <textarea name="msg" id="contact_text" cols="30" rows="10" data-validation="required"></textarea>
+                    <button onclick="sendMail(); return false" id="enviar_mail">Enviar</button>
+                </form>
+
             </div>
 
             <aside id="sidebar">
